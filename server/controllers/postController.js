@@ -121,7 +121,7 @@ const newPostCtrl = asynHandler(
             user: req.userDecoded.id,
             postImage: req.file && req.file.originalname
                 ? { url: result.secure_url, publicId: result.public_id }
-                : { url: "http://localhost:3001/uploads/no-picture.jpg", publicId: null }
+                : { url: "https://backend-first-blog.onrender.com/uploads/no-picture.jpg", publicId: null }
         });
 
         res.status(201).json({ message: "Post Created Successfully", post, success: true });
