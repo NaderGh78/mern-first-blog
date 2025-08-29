@@ -51,7 +51,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const corsOptions = {
   origin: [
     "http://localhost:3000", // local React   
-    "https://frontend-first-blog.vercel.app/" // production frontend
+    "https://frontend-first-blog.vercel.app" // production frontend
   ],
   credentials: true
 };
