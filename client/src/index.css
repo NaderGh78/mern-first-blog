@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
+
+/* 248,249,250 */
+:root {
+  --nav-bg: rgb(248, 249, 250);
+  --dark: #444;
+  --navy-blue: #fff;
+  --light-white: #444;
+  --navbar-active-link: #c7ab62;
+  --navbar-link-hover: #c7ab62;
+  --navbar-link-hover: #c7ab62;
+  --button-bg: #fff;
+  --button-clr: #444;
+  --button-bg-hover: #c7ab62;
+  --arrow-slide-clr: rgba(0, 0, 0, .4);
+  --arrow-slide-hover: #c7ab62;
+  --form-btn-hover: #c7ab62;
+  --light-teal: #3bb19b;
+  --placeholder: #adb5bd;
+  --admin-bg: #f5f5f5;
+  --input-bg: #c4cfcc;
+  --dash-link-bg: #564675;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c7ab62 #fff;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c7ab62;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: auto;
+  position: relative;
+}
+
+body.dark-mode {
+  background-color: #10172a;
+  --nav-bg: #1f2937;
+  --dark: #fff;
+  --navy-blue: #10172a;
+  --light-white: rgba(225, 225, 225, .8);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a.my_link {
+  text-decoration: none;
+  color: #666;
+  transition: all .2s;
+}
+
+input.my-input,
+textarea.my-input,
+select.my-input {
+  padding: 10px;
+  margin-bottom: 12px;
+  background-color: var(--input-bg);
+  border: none;
+  border-radius: 0;
+  border-radius: 5px;
+}
+
+input.my-input::placeholder,
+textarea.my-input::placeholder {
+  color: var(--placeholder);
+  font-size: 14px;
+}
+
+/* style register and login section */
+.my-alert {
+  /* visibility: hidden;
+  height: 45px;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 45px;
+  text-align: center; */
+  display: none;
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.register .register-style {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  overflow: hidden;
+}
+
+.register .register-style .left {
+  flex: 7;
+  padding: 35px 0;
+  background-color: #fff;
+}
+
+.register .register-style .right {
+  flex: 3;
+  background-color: var(--light-teal);
+  color: #fff;
+}
+
+form.my-form {
+  width: 90%;
+  margin: 0 auto 30px;
+}
+
+form.my-form .form-group {
+  text-align: left;
+}
+
+form.my-form label {
+  color: #222;
+}
+
+form.my-form button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 200px;
+  padding: 5px 0;
+  margin: 30px auto 0;
+  background-color: var(--light-teal);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+}
+
+.register .register-style .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register .register-style .right a {
+  text-decoration: none;
+  width: 150px;
+  padding: 3px 0 5px 0;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 30px;
+}
+
+/* style file input */
+form.my-form .customFile-box {
+  position: relative;
+  width: 150px;
+  height: 45px;
+  margin-top: 32px;
+  background-color: var(--input-bg);
+  border-radius: 5px;
+}
+
+form.my-form .customFile-box h3 {
+  position: absolute;
+  top: -22px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #222;
+}
+
+form.my-form .customFile-box label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+form.my-form .customFile-box label svg {
+  font-size: 30px;
+}
+
+form.my-form .customFile-box input {
+  opacity: 0;
+}
+
+form.my-form .customFile-box span {
+  width: max-content;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  padding: 5px 15px;
+  margin-right: -100px;
+  font-size: 17px;
+  color: var(--light-teal);
+  transform: translateY(-50%);
+}
+
+/* style the confirm msg */
+.react-confirm-alert-overlay {
+  background: rgba(0, 0, 0, .3) !important;
+  animation: react-confirm-alert-fadeIn 0.01s 0.01s forwards !important;
+  z-index: 99999999999 !important;
+}
+
+.react-confirm-alert-body {
+  width: 500px !important;
+  padding: 34px !important;
+  background-color: #e2e3e5 !important;
+  text-align: center !important;
+  border-radius: 6px !important;
+}
+
+.react-confirm-alert-button-group {
+  justify-content: center !important;
+}
+
+.react-confirm-alert-button-group>button {
+  background: #222 !important;
+  font-size: 17px !important;
+}
+
+/* =========================== */
+.custom-modal .btn-close {
+  color: #000 !important;
+  transition: all .3s linear 0s;
+  opacity: 1;
+}
+
+.custom-modal .btn-close:hover {
+  color: #000 !important;
+  transform: rotate(-180deg);
+}
+
+.custom-modal .btn-close {
+  box-shadow: none;
+}
+
+.custom-modal .modal-dialog {
+  transform: translateY(-50%) !important;
+}
+
+.custom-modal.show .modal-dialog {
+  transform: translateY(15%) !important;
+}
+
+.custom-modal .modal.fade .modal-dialog {
+  transition: transform .9s ease !important;
+}
+
+/*====================================*/
+/*===========Responsive===============*/
+/*====================================*/
+
+@media only screen and (max-width:425px) {
+
+  .register .register-style {
+    width: 100%;
+    flex-direction: column-reverse !important;
+  }
+
+  .register .register-style .left {
+    padding: 0;
+  }
+
+  .register .register-style .right {
+    gap: 5px;
+    padding: 20px 0;
+  }
+
+  form.my-form {
+    margin: 15px auto;
+  }
+
+  .react-confirm-alert-body {
+    width: 95% !important;
+    padding: 12px !important;
+    margin: auto;
+    font-size: 4vw;
+  }
+
+  form.my-form .customFile-box span {
+    font-size: 4vw;
+  }
+
+  .react-confirm-alert-button-group>button {
+    font-size: 3vw !important;
+  }
+
+  .Toastify__toast-container {
+    width: 80vw !important;
+    left: 20vw !important;
+  }
+
+  .Toastify__toast-body>div:last-child {
+    font-size: 3.5vw !important;
+  }
+
+}

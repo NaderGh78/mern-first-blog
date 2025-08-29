@@ -1,0 +1,15 @@
+.edit-post .edit-post-box {
+    width: 530px;
+    margin: 150px auto;
+}
+
+/*====================================*/
+/*===========Responsive===============*/
+/*====================================*/
+
+@media only screen and (max-width:425px) {
+    .edit-post .edit-post-box {
+        width: 90%;
+        margin: 100px auto 0;
+    }
+}

@@ -1,0 +1,151 @@
+.single-post {
+    position: relative;
+    height: 400px;
+    border-radius: 10px;
+    transition: all .15s cubic-bezier(.4, 0, .2, 1);
+    overflow: hidden;
+}
+
+.single-post a {
+    text-decoration: none;
+}
+
+.single-post .top {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.single-post .top img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+.single-post .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    padding: 15px 10px;
+    background-color: var(--navy-blue) !important;
+    transition: all .2s;
+}
+
+.single-post .bottom h5 {
+    font-size: 16px;
+    color: var(--light-white) !important;
+}
+
+.single-post .bottom h5 a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--light-white) !important;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.single-post .bottom h5+span {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--light-white) !important;
+}
+
+.single-post .bottom .bottom-body .some-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.single-post .bottom .bottom-body .some-info a {
+    font-size: 14px;
+    padding: 2px 10px 4px;
+    background-color: teal;
+    color: #fff;
+    border-radius: 25px;
+    line-height: 1;
+}
+
+.single-post .bottom .bottom-body .some-info span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--light-white) !important;
+}
+
+.single-post:hover .bottom {
+    bottom: 25px;
+}
+
+.single-post:hover .top img {
+    transform: scale(1);
+}
+
+.single-post:hover a.read-more {
+    bottom: -20px;
+}
+
+.single-post a.read-more {
+    position: absolute;
+    bottom: -60px;
+    width: 95%;
+    padding: 4px 0;
+    margin: 0 auto 15px;
+    font-size: 13px;
+    color: var(--dark) !important;
+    text-align: center;
+    border: 1px solid teal;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: all .15s cubic-bezier(.4, 0, .2, 1);
+}
+
+.single-post .bottom .bottom-body .some-info+div {
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+}
+
+.single-post .bottom .bottom-body .some-info+div a {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.single-post .bottom .bottom-body .some-info+div span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/*====================================*/
+/*===========Responsive===============*/
+/*====================================*/
+
+@media only screen and (max-width:425px) {
+
+    .single-post {
+        width: 95%;
+        height: 55vh;
+        margin: auto;
+    }
+
+    .single-post .bottom h5 {
+        font-size: 3.7vw;
+    }
+
+    .single-post .bottom h5 a,
+    .single-post .bottom h5+span,
+    .single-post .bottom .bottom-body .some-info,
+    .single-post .bottom .bottom-body .some-info a {
+        font-size: 3vw;
+    }
+
+}

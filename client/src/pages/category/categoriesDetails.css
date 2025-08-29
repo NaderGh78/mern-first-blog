@@ -1,0 +1,11 @@
+.categories-details {
+    margin-top: 150px;
+}
+
+.categories-details .categories-details-content h2 {
+    display: inline-block;
+    color: var(--dark);
+    text-transform: capitalize;
+    font-style: italic;
+    border-bottom: 2px solid var(--dark);
+}

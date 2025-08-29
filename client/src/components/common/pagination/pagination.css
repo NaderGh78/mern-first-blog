@@ -1,0 +1,48 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: var(--dark) !important;
+    user-select: none;
+    cursor: pointer;
+}
+
+.page.previous {
+    font-size: 12px;
+    color: var(--dark) !important;
+    border-radius: 5px 0 0 5px;
+}
+
+.page.next {
+    font-size: 12px;
+    color: var(--dark) !important;
+    border-radius: 0 5px 5px 0;
+}
+
+.page.next span,
+.page.previous span {
+    color: #000;
+}
+
+.active-pagination {
+    background-color: var(--light-teal);
+    color: #fff !important;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

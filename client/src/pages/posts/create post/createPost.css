@@ -1,0 +1,35 @@
+.create-post {
+    margin-top: 150px; 
+}
+
+.create-post .create-post-box {
+    width: 530px;
+    margin: 150px auto;
+}
+
+.create-post .create-post-box h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: var(--dark);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.create-post .create-post-box label {
+    color: var(--light-white);
+}
+
+.create-post .create-post-box label svg {
+    color: #000;
+}
+
+/*====================================*/
+/*===========Responsive===============*/
+/*====================================*/
+
+@media only screen and (max-width:425px) {
+    .create-post .create-post-box {
+        width: 90%;
+        margin: 100px auto 0;
+    }
+}

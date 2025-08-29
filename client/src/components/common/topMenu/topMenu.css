@@ -1,0 +1,154 @@
+.topmenu .navbar {
+    border-bottom: 1px solid #dee2e6 !important;
+    background-color: var(--nav-bg) !important;
+}
+
+.topmenu .navbar-brand img {
+    width: 6rem;
+}
+
+.topmenu .nav-link {
+    font-size: 20px;
+    color: var(--dark);
+}
+
+.topmenu .nav-link:hover {
+    color: var(--navbar-active-link);
+}
+
+.topmenu .nav-link.active {
+    color: var(--navbar-active-link) !important;
+}
+
+.topmenu .nav-link svg {
+    font-size: 16px;
+}
+
+.topmenu svg.toggle-icon {
+    margin-right: 20px;
+    color: var(--dark);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.topmenu svg.toggle-icon:hover {
+    color: var(--navbar-active-link) !important
+}
+
+/* style the image user in top menu */
+.topmenu .user-account img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    padding: 0 !important;
+    font-size: 20px !important;
+}
+
+.dropdown-toggle span {
+    transition: all .2s;
+    color: var(--dark) !important;
+}
+
+.dropdown-toggle span:hover {
+    color: var(--navbar-active-link) !important;
+}
+
+/* remove the arrow from butn */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* remove the outline border */
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    border-color: transparent !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+    right: 0 !important;
+    left: auto !important;
+    margin-bottom: 20px;
+}
+
+.dropdown-menu[data-bs-popper] a:hover {
+    color: var(--navbar-active-link) !important;
+}
+
+.topmenu .register-login div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.topmenu .register-login a {
+    color: var(--dark);
+}
+
+.topmenu .register-login div p {
+    margin: 0;
+}
+
+.topmenu a.icon-badge {
+    position: relative;
+}
+
+.topmenu a.icon-badge span {
+    position: absolute;
+    top: 2px;
+    left: -3px;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    background-color: var(--navbar-active-link);
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+}
+
+/*====================================*/
+/*===========Responsive===============*/
+/*====================================*/
+
+@media only screen and (max-width: 425px) {
+
+    .navbar-toggler {
+        border-color: var(--dark) !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 0 !important;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .hide-on-resize {
+        display: none;
+    }
+
+}

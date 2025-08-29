@@ -1,0 +1,12 @@
+.modal-register-box .modal-body {
+    overflow-y: auto !important;
+}
+
+.modal-register-box .modal-body::-webkit-scrollbar {
+    width: 3px;
+}
+
+.modal-content {
+    max-height: 100% !important;
+    overflow: hidden !important;
+}  
